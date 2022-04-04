@@ -74,7 +74,7 @@ function genuflex_enqueue_scripts_styles() {
 	wp_enqueue_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- see https://core.trac.wordpress.org/ticket/49742
 		genesis_get_theme_handle() . '-fonts',
 		$appearance['fonts-url'],
-		[],
+		array(),
 		null
 	);
 
@@ -84,7 +84,7 @@ function genuflex_enqueue_scripts_styles() {
 		wp_enqueue_style(
 			genesis_get_theme_handle() . '-amp',
 			get_stylesheet_directory_uri() . '/lib/amp/amp.css',
-			[ genesis_get_theme_handle() ],
+			array( genesis_get_theme_handle() ),
 			genesis_get_theme_version()
 		);
 	}
@@ -147,10 +147,10 @@ add_filter( 'wp_resource_hints', 'genuflex_resource_hints', 10, 2 );
 function genuflex_resource_hints( $urls, $relation_type ) {
 
 	if ( wp_style_is( genesis_get_theme_handle() . '-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = [
+		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
-		];
+		);
 	}
 
 	return $urls;
