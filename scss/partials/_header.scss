@@ -6,7 +6,7 @@
 	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
 	padding: 0 ($spacer * 3);
 
-	@media only screen and (min-width: 960px) {
+	@media only screen and (min-width: $width-lg) {
 		position: -webkit-sticky;
 		position: sticky;
 		top: 0;

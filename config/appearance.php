@@ -28,7 +28,7 @@ $genuflex_link_color_brightness = genuflex_color_brightness( $genuflex_link_colo
 
 return array(
 	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
-	'content-width'        => 1062,
+	'content-width'        => 1200,
 	'button-bg'            => $genuflex_link_color,
 	'button-color'         => $genuflex_link_color_contrast,
 	'button-outline-hover' => $genuflex_link_color_brightness,

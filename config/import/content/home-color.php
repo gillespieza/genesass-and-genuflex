@@ -75,8 +75,8 @@ return <<<CONTENT
 <div style="color:#ddd" class="wp-block-genesis-blocks-gb-spacer gb-block-spacer gb-divider-solid gb-divider-size-1"><hr style="height:30px"/></div>
 <!-- /wp:genesis-blocks/gb-spacer -->
 
-<!-- wp:genesis-blocks/gb-columns {"columns":2,"layout":"gb-2-col-equal","align":"full","paddingTop":14,"paddingRight":5,"paddingBottom":8,"paddingLeft":5,"paddingUnit":"%","customTextColor":"#ffffff","customBackgroundColor":"#111111","columnMaxWidth":1062} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal gb-has-custom-background-color gb-has-custom-text-color gb-columns-center alignfull" style="padding-top:14%;padding-right:5%;padding-bottom:8%;padding-left:5%;background-color:#111111;color:#ffffff"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:1062px"><!-- wp:genesis-blocks/gb-column -->
+<!-- wp:genesis-blocks/gb-columns {"columns":2,"layout":"gb-2-col-equal","align":"full","paddingTop":14,"paddingRight":5,"paddingBottom":8,"paddingLeft":5,"paddingUnit":"%","customTextColor":"#ffffff","customBackgroundColor":"#111111","columnMaxWidth":1200} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal gb-has-custom-background-color gb-has-custom-text-color gb-columns-center alignfull" style="padding-top:14%;padding-right:5%;padding-bottom:8%;padding-left:5%;background-color:#111111;color:#ffffff"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:1200px"><!-- wp:genesis-blocks/gb-column -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:paragraph {"align":"left","customTextColor":"#ffffff","customFontSize":40} -->
 <p style="color:#ffffff;font-size:40px" class="has-text-color has-text-align-left">Contact us today</p>
 <!-- /wp:paragraph --></div></div>
