@@ -193,7 +193,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
  * Adds a filter to disable email notifications after updates.
  */
 function itc_stop_update_emails( $send, $type, $core_update, $result ) {
-	if ( ! empty( $type ) &&  'success' === $type ) {
+	if ( ! empty( $type ) && 'success' === $type ) {
 		return false;
 	}
 	return true;

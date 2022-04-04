@@ -24,70 +24,70 @@ function genuflex_customizer_register( $wp_customize ) {
 
 	$wp_customize->add_setting(
 		'genuflex_link_color',
-		[
+		array(
 			'default'           => $appearance['default-colors']['link'],
 			'sanitize_callback' => 'sanitize_hex_color',
-		]
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'genuflex_link_color',
-			[
+			array(
 				'description' => __( 'Change the color of post info links and button blocks, the hover color of linked titles and menu items, and more.', 'genuflex' ),
 				'label'       => __( 'Link Color', 'genuflex' ),
 				'section'     => 'colors',
 				'settings'    => 'genuflex_link_color',
-			]
+			)
 		)
 	);
 
 	$wp_customize->add_setting(
 		'genuflex_accent_color',
-		[
+		array(
 			'default'           => $appearance['default-colors']['accent'],
 			'sanitize_callback' => 'sanitize_hex_color',
-		]
+		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
 			'genuflex_accent_color',
-			[
+			array(
 				'description' => __( 'Change the default hover color for button links, menu buttons, and submit buttons. The button block uses the Link Color.', 'genuflex' ),
 				'label'       => __( 'Accent Color', 'genuflex' ),
 				'section'     => 'colors',
 				'settings'    => 'genuflex_accent_color',
-			]
+			)
 		)
 	);
 
 	$wp_customize->add_setting(
 		'genuflex_logo_width',
-		[
+		array(
 			'default'           => 350,
 			'sanitize_callback' => 'absint',
 			'validate_callback' => 'genuflex_validate_logo_width',
-		]
+		)
 	);
 
 	// Add a control for the logo size.
 	$wp_customize->add_control(
 		'genuflex_logo_width',
-		[
+		array(
 			'label'       => __( 'Logo Width', 'genuflex' ),
 			'description' => __( 'The maximum width of the logo in pixels.', 'genuflex' ),
 			'priority'    => 9,
 			'section'     => 'title_tagline',
 			'settings'    => 'genuflex_logo_width',
 			'type'        => 'number',
-			'input_attrs' => [
+			'input_attrs' => array(
 				'min' => 100,
-			],
+			),
 
-		]
+		)
 	);
 
 }

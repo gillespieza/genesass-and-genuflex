@@ -61,10 +61,10 @@ function genuflex_woocommerce_theme_notice() {
 			'<a href="%s">%s</a>',
 			wp_nonce_url(
 				add_query_arg(
-					[
+					array(
 						'action' => 'install-plugin',
 						'plugin' => $plugin_slug,
-					],
+					),
 					$admin_url
 				),
 				'install-plugin_' . $plugin_slug
@@ -100,7 +100,7 @@ add_action( 'admin_enqueue_scripts', 'genuflex_notice_script' );
  */
 function genuflex_notice_script() {
 
-	wp_enqueue_script( 'genuflex_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', [ 'jquery' ], '1.0', true );
+	wp_enqueue_script( 'genuflex_notice_script', get_stylesheet_directory_uri() . '/lib/woocommerce/js/notice-update.js', array( 'jquery' ), '1.0', true );
 
 }
 
@@ -114,10 +114,10 @@ function genuflex_reset_woocommerce_notice() {
 
 	global $wpdb;
 
-	$args  = [
+	$args  = array(
 		'meta_key'   => $wpdb->prefix . 'genuflex_woocommerce_message_dismissed', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 		'meta_value' => 1, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
-	];
+	);
 	$users = get_users( $args );
 
 	foreach ( $users as $user ) {
