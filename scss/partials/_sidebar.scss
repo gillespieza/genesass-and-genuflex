@@ -2,8 +2,8 @@
 ---------------------------------------------------------------------------- */
 
 .sidebar {
-	font-size: $sidebar--font-size;
-	line-height: $line-height--medium;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
 
 	@media only screen and (min-width: 960px) {
 		float: right;

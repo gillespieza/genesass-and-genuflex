@@ -40,9 +40,9 @@
 }
 
 .site-title {
-	font-size: $site-title--font-size;
+	font-size: $font-size-h1;
 	font-weight: 600;
-	line-height: $line-height--smaller;
+	line-height: $line-height-xs;
 	margin-bottom: 0;
 
 	a {

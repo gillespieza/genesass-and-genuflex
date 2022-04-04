@@ -12,10 +12,10 @@ html {
 body {
 	background-color: $body--background-color;
 	color: $body--font-color;
-	font-family: $body--font-family;
-	font-size: $body--font-size;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
 	font-weight: 400;
-	line-height: $line-height--normal;
+	line-height: $line-height-base;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -115,26 +115,26 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $headings--font-family;
+	font-family: $font-family-headings;
 	font-weight: 700;
-	line-height: $line-height--small;
+	line-height: $line-height-sm;
 	margin: 0 0 ($spacer * 2);
 }
 
 h1 {
-	font-size: $h1--font-size;
+	font-size: $font-size-h1;
 }
 
 h2 {
-	font-size: $h2--font-size;
+	font-size: $font-size-h2;
 }
 
 h3 {
-	font-size: $h3--font-size;
+	font-size: $font-size-h3;
 }
 
 h4 {
-	font-size: $h4--font-size;
+	font-size: $font-size-h4;
 }
 
 .entry-content h3,
@@ -147,11 +147,11 @@ h4 {
 }
 
 h5 {
-	font-size: $h5--font-size;
+	font-size: $font-size-h5;
 }
 
 h6 {
-	font-size: $h6--font-size;
+	font-size: $font-size-h6;
 }
 
 /* Objects
@@ -264,7 +264,7 @@ textarea {
 	background-color: $forms__background-color;
 	border: $border-width $border-style $border-color;
 	color: $dark;
-	font-size: $forms--font-size;
+	font-size: $font-size-base;
 	font-weight: 400;
 	padding: ($spacer * 1.5);
 	width: 100%;
@@ -304,7 +304,7 @@ input[type="submit"],
 	color: $button--font-color;
 	cursor: pointer;
 	display: inline-block;
-	font-size: $button--font-size;
+	font-size: $font-size-lg;
 	font-weight: 600;
 	padding: ($spacer * 1.5) ($spacer * 3);
 	text-align: center;
@@ -357,7 +357,7 @@ tbody {
 
 td,
 th {
-	line-height: $line-height--big;
+	line-height: $line-height-xl;
 	text-align: left;
 	vertical-align: top;
 }

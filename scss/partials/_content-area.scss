@@ -64,7 +64,7 @@
 --------------------------------------------- */
 .entry-meta {
 	p & {
-		font-size: $entry-meta--font-size;
+		font-size: $font-size-sm;
 		margin-bottom: 0;
 	}
 
@@ -111,7 +111,7 @@
 			color: $archive-pagination--font-color;
 			cursor: pointer;
 			display: inline-block;
-			font-size: $archive-pagination--font-size;
+			font-size: $font-size-base;
 			font-weight: 600;
 			margin-bottom: $spacer * 0.4;
 			padding: ($spacer * 0.8) ($spacer * 1.2);

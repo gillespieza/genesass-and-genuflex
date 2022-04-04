@@ -56,24 +56,72 @@ $danger: #D50000; // material design -red-A700
 
 
 
-// Typography
+
+// ----------------------------------------------------------------------------
+// TYPOGRAPHY
+// ----------------------------------------------------------------------------
+
 // ---------------------------------------------------------------------------
 // Base Fonts
-$base-font: 'Montserrat',
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
+$font-family-base: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-$heading-font: $base-font;
+// monospace
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// icons
+$font-family-icons: 'FontAwesome', dashicons;
+
+$font-family-headings: $font-family-base !default;
+
+// Font Sizes
+// ---------------------------------------------------------------------------
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875; // 14px
+$font-size-lg: $font-size-base * 1.125; // 18px
+$font-size-xl: $font-size-base * 1.25; // 20px
+$font-size-xxl: $font-size-base * 2; // 32px
+
+// Headings
+// ---------------------------------------------------------------------------
+$font-size-h1: $font-size-base * 3.1 !default;  // 50px
+$font-size-h2: $font-size-base * 2.8 !default;  // 45px, skip links, main navigation, sidebars (and in the content)
+$font-size-h3: $font-size-base * 2.25 !default; // 36px, widget-titles (and in the content)
+$font-size-h4: $font-size-base * 1.95 !default; // 31px, only in the content
+$font-size-h5: $font-size-base * 1.65 !default; // 26px, only in the content
+$font-size-h6: $font-size-base * 1.4 !default;  // 22px only in the content
+
+
+// Line heights
+// ---------------------------------------------------------------------------
+$line-height-base: 1.5 !default;
+
+$line-height-xl: 2 !default;
+$line-height-lg: 1.75 !default;
+$line-height-sm: 1.3 !default;
+$line-height-xs: 1 !default;
+
+// ----------------------------------------------------------------------------
+// BREAKPOINTS
+// ----------------------------------------------------------------------------
+$width-xs: 360px;
+$width-sm: 576px;
+$width-md: 768px;
+$width-lg: 992px;
+$width-xl: 1200px;
+
+$max-width: $width-xl;
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Screen widths, Media queries - WC widths in WC variables
 $standard-screen-width: 960px;
@@ -87,54 +135,6 @@ $border-color: $gray-200;
 $box-shadow-blur-radius: 20px;
 $box-shadow-opacity: 0.05;
 
-// Font sizes
-$body--font-size: 16px;
-$h1--font-size: 3rem; // title for page, single, archive, search, the 404
-$h2--font-size: 2.7rem; // skip links, main navigation, sidebars (and in the content)
-$h3--font-size: 2.3rem; // widget-titles (and in the content)
-$h4--font-size: 2rem; // only in the content
-$h5--font-size: 1.8rem; // only in the content
-$h6--font-size: 1.6rem; // only in the content
-
-$font-size-small: 0.9rem;
-$font-size-regular: 1rem;
-$font-size-large: 1.6rem;
-$font-size-huge: 3rem;
-
-
-$after-entry__breadcrumb--font-size: 1.6rem;
-$archive-author-box__entry-title--font-size: 2rem;
-$archive-pagination--font-size: $font-size-regular;
-$blockquote__before--font-size: 3rem; // not used
-$breadcrumb--font-size: $font-size-small;
-$button--font-size: 18px;
-$comments--font-size: $font-size-regular; // not used?
-$enews-widget__input--font-size: 1.6rem;
-$entry-content__caption--font-size: 1.4rem;
-$entry-meta--font-size: 1.6rem;
-$entry-title--font-size: 2.7rem;
-$featured-content__entry-title--font-size: 1.6rem;
-$footer-widgets--font-size: $font-size-small; // not used?
-$forms--font-size: $font-size-regular;
-$genesis-nav-menu__sub-menu__link--font-size: $font-size-small;
-$genesis-nav-menu--font-size: $font-size-regular;
-$sidebar--font-size: $font-size-regular;
-$site-footer--font-size: 1.5rem;
-$site-title--font-size: 2rem;
-$widget-title--font-size: 1.4rem;
-
-// Font families
-$body--font-family: $base-font;
-$headings--font-family: $heading-font;
-
-// Line heights
-$line-height--big: 2;
-$line-height--large: 1.75;
-$line-height--normal: 1.625;
-$line-height--medium: 1.5;
-$line-height--medium-small: 1.4;
-$line-height--small: 1.2;
-$line-height--smaller: 1;
 
 // Font colors
 $archive-pagination--font-color-hover: $white;

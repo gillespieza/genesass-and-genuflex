@@ -3,7 +3,7 @@
 
 .genesis-nav-menu {
 	clear: both;
-	line-height: $line-height--smaller;
+	line-height: $line-height-xs;
 	width: 100%;
 
 	.menu-item {
@@ -32,7 +32,7 @@
 	a {
 		color: $genesis-nav-menu--font-color;
 		display: block;
-		font-size: $genesis-nav-menu--font-size;
+		font-size: $font-size-base;
 		font-weight: 400;
 		outline-offset: -1px;
 		padding-bottom: ($spacer * 1.2);
@@ -90,7 +90,7 @@
 
 		a {
 			background-color: $genesis-nav-menu__sub-menu__link--background-color;
-			font-size: $genesis-nav-menu__sub-menu__link--font-size;
+			font-size: $font-size-base;
 			position: relative;
 			word-wrap: break-word;
 			width: 100%;
@@ -164,7 +164,7 @@
 	color: $menu-toggle--font-color;
 	display: block;
 	float: right;
-	line-height: $line-height--large;
+	line-height: $line-height-lg;
 	margin-bottom: $spacer;
 	margin-top: $spacer;
 	margin-left: 0 auto;
@@ -283,7 +283,7 @@
 	margin-top: ($spacer);
 
 	.genesis-nav-menu {
-		line-height: $line-height--medium;
+		line-height: $line-height-base;
 	}
 
 	.menu-item {
