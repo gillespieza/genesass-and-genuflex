@@ -54,3 +54,16 @@
 		margin-bottom: 0;
 	}
 }
+
+
+/* Sticky Footer
+---------------------------------------------------------------------------- */
+
+.site-container {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+	.site-inner {
+		flex: 1;
+	}
+}

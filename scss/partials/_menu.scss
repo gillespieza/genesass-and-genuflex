@@ -8,7 +8,6 @@
 
 	.menu-item {
 		display: block;
-		float: none;
 		position: relative;
 
 		@media only screen and (min-width: $width-lg) {
@@ -161,16 +160,12 @@
 .menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: $menu-toggle--font-color;
+	color: $gray-900;
 	display: block;
-	float: right;
 	line-height: $line-height-lg;
-	margin-bottom: $spacer;
-	margin-top: $spacer;
-	margin-left: 0 auto;
-	margin-right: 0 auto;
-	overflow: hidden; //
-	padding: ($spacer * 1.5) 0;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0; // same as logo padding.
 	position: relative;
 	text-align: center;
 	visibility: visible;
@@ -184,7 +179,9 @@
 
 	&:focus,
 	&:hover {
-		color: $menu-toggle--font-color-hover;
+		background-color: transparent;
+		border-width: 0;
+		color: $primary;
 	}
 
 	@media only screen and (min-width: $width-lg) {
@@ -196,7 +193,7 @@
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: $sub-menu-toggle--font-color;
+	color: $primary;
 	display: block;
 	float: right;
 	margin: 0 auto;
@@ -211,13 +208,14 @@
 
 	&:focus,
 	&:hover {
-		color: $sub-menu-toggle--font-color-hover;
+		background-color: transparent;
+		color: $secondary;
 	}
 
 	&:before {
 		display: inline-block;
 		text-rendering: auto;
-		transform: rotate(0);
+		transform: rotate(270deg);
 		transition: transform 0.25s ease-in-out;
 	}
 
@@ -242,11 +240,13 @@
 
 	.menu-toggle {
 		&:before {
-			float: left;
+			color: $secondary;
+			font-size: 30px;
+			height: 30px;
 			margin-right: ($spacer * 0.5);
 			position: relative;
 			text-rendering: auto;
-			top: 1px;
+			width: 30px;
 		}
 	}
 }
@@ -257,14 +257,11 @@
 --------------------------------------------- */
 
 .nav-primary {
-	clear: left;
 	padding-bottom: ($spacer * 1.5);
 	padding-top: ($spacer * 1.5);
 	width: 100%;
 
 	@media only screen and (min-width: $width-lg) {
-		clear: none;
-		float: right;
 		width: auto;
 
 		.genesis-nav-menu {

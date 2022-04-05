@@ -1,10 +1,24 @@
 /* Site Header
 ---------------------------------------------------------------------------- */
+/*
+ * STRUCTURE:
+ * .site-header
+ 		.title-area
+		.menu-toggle
+		.nav-primary
+ *
+ */
 
 .site-header {
-	background-color: $site-header--background-color;
+	align-content: center;
+	align-items: center;
+	background-color: $white;
 	box-shadow: 0 0 $box-shadow-blur-radius rgba(0, 0, 0, $box-shadow-opacity);
-	padding: 0 ($spacer * 3);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: $spacer ($spacer * 2);
+	width: 100%;
 
 	@media only screen and (min-width: $width-lg) {
 		position: -webkit-sticky;
@@ -12,32 +26,37 @@
 		top: 0;
 		z-index: 9999;
 	}
-}
 
-/* Title Area
---------------------------------------------- */
+	/* Title Area
+	--------------------------------------------- */
 
-.title-area {
-	float: left;
-	padding-bottom: ($spacer * 2.5);
-	padding-top: ($spacer * 2.5);
+	.title-area {
+		padding: 0;
 
-	.wp-custom-logo {
-		max-width: 350px;
-		padding-bottom: ($spacer * 0.5);
-		padding-top: ($spacer * 0.5);
-		width: 100%;
+		.wp-custom-logo {
+			max-width: 350px;
+			padding-bottom: ($spacer * 0.5);
+			padding-top: ($spacer * 0.5);
+			width: 100%;
 
-		.custom-logo-link {
-			display: block;
+			.custom-logo-link {
+				display: block;
 
-			img {
-				width: auto;
+				img {
+					width: auto;
+				}
 			}
-		}
 
+		}
+	}
+
+	.nav-primary {
+		flex-grow: 2;
+		width: 100%;
 	}
 }
+
+
 
 .site-title {
 	font-size: $font-size-h1;

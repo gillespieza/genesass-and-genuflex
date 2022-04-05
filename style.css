@@ -5,7 +5,7 @@
    Author: StudioPress, gillespieza
    Author URI: https: //gillespieza.github.io/online-cv/
 
-	Version: 0.0.4
+	Version: 2022-04-04-17-58
 
 	Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -1132,11 +1132,37 @@ figcaption,
 
 /* Site Header
 ---------------------------------------------------------------------------- */
+/*
+ * STRUCTURE:
+ * .site-header
+ 		.title-area
+		.menu-toggle
+		.nav-primary
+ *
+ */
 .site-header {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  /* Title Area
+	--------------------------------------------- */
 }
 
 @media only screen and (min-width: 960px) {
@@ -1148,27 +1174,30 @@ figcaption,
   }
 }
 
-/* Title Area
---------------------------------------------- */
-.title-area {
-  float: left;
-  padding-bottom: 25px;
-  padding-top: 25px;
+.site-header .title-area {
+  padding: 0;
 }
 
-.title-area .wp-custom-logo {
+.site-header .title-area .wp-custom-logo {
   max-width: 350px;
   padding-bottom: 5px;
   padding-top: 5px;
   width: 100%;
 }
 
-.title-area .wp-custom-logo .custom-logo-link {
+.site-header .title-area .wp-custom-logo .custom-logo-link {
   display: block;
 }
 
-.title-area .wp-custom-logo .custom-logo-link img {
+.site-header .title-area .wp-custom-logo .custom-logo-link img {
   width: auto;
+}
+
+.site-header .nav-primary {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 100%;
 }
 
 .site-title {
@@ -1209,7 +1238,6 @@ figcaption,
 
 .genesis-nav-menu .menu-item {
   display: block;
-  float: none;
   position: relative;
 }
 
@@ -1335,16 +1363,12 @@ figcaption,
 .menu-toggle {
   background-color: transparent;
   border-width: 0;
-  color: #424242;
+  color: #212121;
   display: block;
-  float: right;
   line-height: 1.75;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0 auto;
-  margin-right: 0 auto;
+  margin: 0 auto;
   overflow: hidden;
-  padding: 15px 0;
+  padding: 0;
   position: relative;
   text-align: center;
   visibility: visible;
@@ -1356,6 +1380,8 @@ figcaption,
 }
 
 .menu-toggle:focus, .menu-toggle:hover {
+  background-color: transparent;
+  border-width: 0;
   color: #036966;
 }
 
@@ -1369,7 +1395,7 @@ figcaption,
 .sub-menu-toggle {
   background-color: transparent;
   border-width: 0;
-  color: #424242;
+  color: #036966;
   display: block;
   float: right;
   margin: 0 auto;
@@ -1384,14 +1410,15 @@ figcaption,
 }
 
 .sub-menu-toggle:focus, .sub-menu-toggle:hover {
-  color: #036966;
+  background-color: transparent;
+  color: #00B5B0;
 }
 
 .sub-menu-toggle:before {
   display: inline-block;
   text-rendering: auto;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
@@ -1416,17 +1443,18 @@ figcaption,
 }
 
 .site-header .menu-toggle:before {
-  float: left;
+  color: #00B5B0;
+  font-size: 30px;
+  height: 30px;
   margin-right: 5px;
   position: relative;
   text-rendering: auto;
-  top: 1px;
+  width: 30px;
 }
 
 /* Header Menu
 --------------------------------------------- */
 .nav-primary {
-  clear: left;
   padding-bottom: 15px;
   padding-top: 15px;
   width: 100%;
@@ -1434,8 +1462,6 @@ figcaption,
 
 @media only screen and (min-width: 960px) {
   .nav-primary {
-    clear: none;
-    float: right;
     width: auto;
   }
   .nav-primary .genesis-nav-menu a {
@@ -1705,6 +1731,25 @@ p .entry-meta {
 
 .site-footer p {
   margin-bottom: 0;
+}
+
+/* Sticky Footer
+---------------------------------------------------------------------------- */
+.site-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.site-container .site-inner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* Media Queries
